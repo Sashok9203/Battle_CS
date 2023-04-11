@@ -34,6 +34,7 @@ namespace Battle_CS
         protected CombatVehicle(string?name, CombatVehicleType type ,double health)
         {
             if (String.IsNullOrWhiteSpace(name)) throw new ApplicationException(" Name does not be empty...");
+            if (health <= 0) throw new ApplicationException(" Invalid combat vehicle health value...");
             Name = name ;
             Type = type;
             Health = health ; 
